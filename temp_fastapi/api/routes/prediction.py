@@ -8,7 +8,7 @@ router = APIRouter()
 class ModelType(str,Enum):
     RF='random_forest'
     SVR='support_vector'
-    GBM='lightgbm'
+    LGBM='lightgbm'
 
 
 @router.post("/model_deploy/{model_type}",response_model= TemperaturePrediction)
@@ -20,6 +20,6 @@ async def predict(request: Request,model_type: ModelType,
     elif model_type==ModelType.SVR:
         model = request.app.state.model_svr
     else:
-        model = request.app.state.model_gbm
+        model = request.app.state.model_lgbm
     prediction: TemperaturePrediction = model.predict(payload)
     return prediction

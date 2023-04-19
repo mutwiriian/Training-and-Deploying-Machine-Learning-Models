@@ -7,12 +7,12 @@ from enum import Enum
 class ModelPaths(str,Enum):
     model_path_rf=PATH_RF
     model_path_svr=PATH_SVR
-    model_path_gbm=PATH_GBM
+    model_path_lgbm=PATH_GBM
 
 def _startup_model(app: FastAPI) -> None:
     app.state.model_rf=TemperaturePredictionModel(ModelPaths.model_path_rf)
     app.state.model_svr=TemperaturePredictionModel(ModelPaths.model_path_svr)
-    app.state.model_gbm=TemperaturePredictionModel(ModelPaths.model_path_gbm)
+    app.state.model_lgbm=TemperaturePredictionModel(ModelPaths.model_path_lgbm)
 
 def _shutdown_model(app: FastAPI) -> None:
     app.state.model_rf= None
