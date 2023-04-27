@@ -7,10 +7,14 @@ cols_path= os.path.join(os.path.dirname(__file__),'..','data','cols.json')
 with open(cols_path,'r') as f:
     cols=json.load(f)
 
+#create dictionary of the column names and the datatypes
+#by dynamically evaluating the datatype i.e, 'Int'-> Int
 fields={}
 for col_name,col_type in cols.items():
     fields[col_name]=eval(col_type)
 
+#Handy __annotations__ methods to programmatically fill in the fields and their types
+#This saves time and effort doing so manually
 class TemperaturePredictionPayload(BaseModel):
     __annotations__=fields
 
@@ -28,6 +32,7 @@ class TemperaturePredictionPayload(BaseModel):
 #print(sample_payload)
 #print(sample_payload.wtd_mean_fie)
 
+#extract the field values from the pydantic model
 def payload_to_list(temp_payload: TemperaturePredictionPayload)-> list:
     return [temp_payload.__getattribute__(col) for col in cols.keys()] #getattr(temp_payload,col)
 

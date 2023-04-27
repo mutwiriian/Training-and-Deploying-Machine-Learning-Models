@@ -1,5 +1,5 @@
 from fastapi import APIRouter
-from temp_fastapi.api.routes import home, prediction
+from api.routes import home, prediction
 
 api_router = APIRouter()
 

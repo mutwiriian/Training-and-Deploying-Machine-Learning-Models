@@ -1,17 +1,19 @@
 from fastapi import APIRouter, Request, Depends, HTTPException,status
-from temp_fastapi.models.prediction import TemperaturePrediction
-from temp_fastapi.models.payload import TemperaturePredictionPayload
+from models.prediction import TemperaturePrediction
+from models.payload import TemperaturePredictionPayload
 from enum import Enum
 
 router = APIRouter()
 
+#set model types available to user
 class ModelType(str,Enum):
     RF='random_forest'
     SVR='support_vector'
     LGBM='lightgbm'
 
-
-@router.post("/model_deploy/{model_type}",response_model= TemperaturePrediction)
+#run predction at endpoint from the FastAPI app object
+@router.post("/model_deploy/{model_type}",
+             response_model= TemperaturePrediction)
 async def predict(request: Request,model_type: ModelType,
                   payload: TemperaturePredictionPayload) -> TemperaturePrediction:     
        

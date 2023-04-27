@@ -4,7 +4,7 @@ router = APIRouter()
 
 @router.get('/')
 async def home():
-    return {'FastAPI': 'Machine Learning'}
+    return {'FastAPI': 'Machine Learning Project Running'}
 
 
 
