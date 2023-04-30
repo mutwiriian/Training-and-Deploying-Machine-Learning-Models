@@ -1,12 +1,13 @@
-from typing import Annotated
-from datetime import datetime
-from fastapi import Depends, FastAPI, HTTPException, status
-from fastapi.security import OAuth2PasswordBearer
-from pydantic import BaseModel
-from random import randint, random
 import codecs
 import json
 import logging
+from datetime import datetime
+from random import randint, random
+from typing import Annotated
+
+from fastapi import Depends, FastAPI, HTTPException, status
+from fastapi.security import OAuth2PasswordBearer
+from pydantic import BaseModel
 
 app = FastAPI()
 
