@@ -20,6 +20,7 @@ ipython = "^8.12.0"
 pydantic = {extras = ["email"], version = "^1.10.7"}
 email-validator = "^2.0.0.post1"
 uvicorn = "^0.21.1"
+sqlalchemy = "^2.0.13"
 
 
 [build-system]
