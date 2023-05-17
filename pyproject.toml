@@ -21,6 +21,9 @@ pydantic = {extras = ["email"], version = "^1.10.7"}
 email-validator = "^2.0.0.post1"
 uvicorn = "^0.21.1"
 sqlalchemy = "^2.0.13"
+python-multipart = "^0.0.6"
+python-jose = {extras = ["cryptograpghy"], version = "^3.3.0"}
+passlib = {extras = ["bcrypt"], version = "^1.7.4"}
 
 
 [build-system]

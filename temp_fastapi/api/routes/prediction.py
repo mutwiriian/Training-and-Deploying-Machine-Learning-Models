@@ -1,8 +1,9 @@
-from fastapi import APIRouter, Request, Depends, HTTPException,status
+from fastapi import APIRouter, Depends, Request
 from models.prediction import TemperaturePrediction
 from models.payload import TemperaturePredictionPayload
 from enum import Enum
 
+from core.auth import get_current_user
 router = APIRouter()
 
 #set model types available to user
@@ -15,7 +16,8 @@ class ModelType(str,Enum):
 @router.post("/model_deploy/{model_type}",
              response_model= TemperaturePrediction)
 async def predict(request: Request,model_type: ModelType,
-                  payload: TemperaturePredictionPayload) -> TemperaturePrediction:     
+                  payload: TemperaturePredictionPayload,
+             current_user=Depends(get_current_user)) -> TemperaturePrediction:     
        
     if model_type==ModelType.RF:
         model = request.app.state.model_rf
