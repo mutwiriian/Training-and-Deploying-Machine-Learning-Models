@@ -7,7 +7,8 @@ and generates responses.
 
 This project also features user management with role-based access for different uses using [SQLAlchemy](https://docs.sqlalchemy.org/en/14/orm/tutorial.html)
 
-##Set up
+**Set up**
+
 To run the service ensure you have [Python](https://www.python.org/downloads/) and [Git](https://git-scm.com/downloads) installed
 
 Run 
