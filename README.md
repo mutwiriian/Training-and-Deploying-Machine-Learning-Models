@@ -32,7 +32,7 @@ To run the app open the terminal and run the `main.py` file
 
 This will enable you access the in any browser as shown below
 
-![Alt text](assets/Screenshot%20(15).png)
+![Alt text](assets/Screenshot%20(14).png)
 
 and execute your queries
-![Alt text](assets/Screenshot%20(14).png)
+![Alt text](assets/Screenshot%20(15).png)
