@@ -6,17 +6,9 @@ from sqlalchemy import select
 from sqlalchemy.orm import Session
 
 
-def get_user_by_email(db: Session, username:str):
-    stmt=select(db_models.User).where(db_models.User.username==username)
-
-    return db.scalars(stmt).first()
-
-
 def get_user_by_username(db: Session, username: str):
     stmt=select(db_models.User).where(db_models.User.username==username)
     return db.scalars(stmt).first()
-
-
 
 
 def create_user(db: Session,user: UserCreate):
