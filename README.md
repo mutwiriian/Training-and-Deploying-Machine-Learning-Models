@@ -21,14 +21,15 @@ Then
 
 Go to [Poetry](https://python-poetry.org/docs/) for installation instructions on the Poetry package manager
 
-To install all the packages and other dependencies required to run the service run: 
-
-`poetry install`
 
 Activate the environment by running 
 
 `poetry shell`
 
+
+To install all the packages and other dependencies required to run the service run: 
+
+`poetry install`
 
 
 To run the app open the terminal and run the `main.py` file
