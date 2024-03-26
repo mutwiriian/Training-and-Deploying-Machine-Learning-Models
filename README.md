@@ -1,6 +1,6 @@
 ## FastAPI-and-Scikit-Learn-for-Machine-Learning-Deployment
 Machine Learning models when built are not meant to sit inside a Notebook in isolation.
-They are built so that they can be applied in the real world by instatatenoeusly
+They are built so that they can be applied in the real world by instantaneously
 making predictions. In this project, I not only build machine learning models, but I go a step further to deploy them as an API with [FastAPI](https://fastapi.tiangolo.com/lo/) so 
 that it can be integrated into existing sytems or services by an  endpoint. The endpoint receives requests in real time
 and generates responses. 
@@ -38,5 +38,5 @@ This will enable you access the service in any browser as demonstrated below
 
 ![Alt text](assets/Screenshot%20(14).png)
 
-and execute your queries
+and execute your requests
 ![Alt text](assets/Screenshot%20(15).png)
